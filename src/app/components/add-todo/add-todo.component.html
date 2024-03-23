@@ -1,1 +1,10 @@
-<p>add-todo works!</p>
+<form class="form-container">
+  <mat-form-field>
+    <mat-label>Description</mat-label>
+    <input [formControl]="descriptionFormControl" matInput />
+  </mat-form-field>
+
+  <mat-checkbox [formControl]="doneFormControl"> Done </mat-checkbox>
+
+  <button mat-raised-button color="primary" (click)="submit()">Submit</button>
+</form>
