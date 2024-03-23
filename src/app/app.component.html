@@ -1,8 +1,9 @@
-
-<div *ngFor="let item of todoItems">
+<ul class="todo-list">
+  @for (item of todoItems; track item) {
   <div>
-    <span>{{item.description}}</span> <span>
-      {{item.createDate | date:'short'}}
-    </span> <input type="checkbox" [(ngModel)]="item.done" />
+    <mat-checkbox class="todo-item" [(ngModel)]="item.done">
+      {{ item.description }}
+    </mat-checkbox>
   </div>
-</div>
+  }
+</ul>
