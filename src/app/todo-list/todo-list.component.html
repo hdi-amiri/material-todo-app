@@ -1,0 +1,15 @@
+<ul class="todo-list">
+  @for (item of todoItems; track item) {
+  <div>
+    <mat-checkbox class="todo-item" [(ngModel)]="item.done">
+      <span [class.todo-line-through]="item.done">
+        {{ item.description }}
+      </span>
+    </mat-checkbox>
+  </div>
+  }
+</ul>
+
+<div class="add-todo">
+  <a mat-raised-button routerLink="/add-todo" color="primary"> Add </a>
+</div>
